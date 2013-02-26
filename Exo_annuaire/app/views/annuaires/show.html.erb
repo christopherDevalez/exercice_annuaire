@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nom:</b>
+  <%= @annuaire.nom %>
+</p>
+
+<p>
+  <b>Prenom:</b>
+  <%= @annuaire.prenom %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @annuaire.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @annuaire.phone %>
+</p>
+
+
+<%= link_to 'Editer', edit_annuaire_path(@annuaire) %> |
+<%= link_to 'Retour', annuaires_path %>

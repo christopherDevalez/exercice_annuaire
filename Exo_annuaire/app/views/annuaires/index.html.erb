@@ -1,0 +1,29 @@
+<h1>ANNUAIRE</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @annuaires.each do |annuaire| %>
+  <tr>
+    <td><%= annuaire.nom %></td>
+    <td><%= annuaire.prenom %></td>
+    <td><%= annuaire.email %></td>
+    <td><%= annuaire.phone %></td>
+    <td><%= link_to 'Voir', annuaire %></td>
+    <td><%= link_to 'Editer', edit_annuaire_path(annuaire) %></td>
+    <td><%= link_to 'Supprimer', annuaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nouveau contact', new_annuaire_path %>
